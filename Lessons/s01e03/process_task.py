@@ -57,14 +57,24 @@ def read_task_json(file_path: str) -> TaskJson:
         test_data=test_data_list
     )
 
+def calculate_sum_from_question(question: str) -> int:
+    """
+    Parse a question string like "9 + 41" and return the sum.
+    """
+    # Split the string and convert to integers
+    numbers = [int(num.strip()) for num in question.split('+')]
+    return sum(numbers)
+
 def process_test_data(task_json: TaskJson) -> TaskJson:
     """
     Process the test data and create a new TaskJson object.
-    You can modify this function to implement your specific processing logic.
+    Updates each answer field with the correct sum calculated from the question.
     """
-    # Example processing: Add 1000 to each answer
     for item in task_json.test_data:
-        item.answer += 1000
+        # Calculate the correct sum from the question
+        correct_answer = calculate_sum_from_question(item.question)
+        # Update the answer field
+        item.answer = correct_answer
     
     return task_json
 
