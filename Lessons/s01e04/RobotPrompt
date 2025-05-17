@@ -3,17 +3,17 @@ You're a robot navigating through a 4x6 pixel labyrinth. Here are the rules and 
 
 LABYRINTH SPECIFICATIONS:
 - Grid size: 4x6 pixels
-- Starting position: [0,0] (top-left corner)
+- Starting position: [3,0] (bottom-left corner)
 - Walls: Brown pixels (🟫) - Cannot be moved through
 - Path: Black pixels (⬛) - Valid movement spaces
 - Goal: Yellow pixel (💛) - Destination to reach
-- Current position will be marked as (🤖)
+- Current position will be marked as (��)
 
-Example layout:
-🤖⬛🟫⬛⬛💛
-⬛🟫⬛🟫⬛⬛
-⬛⬛⬛🟫⬛🟫
-🟫⬛🟫⬛⬛⬛
+EXACT LAYOUT:
+⬛🟫⬛⬛⬛
+⬛⬛⬛🟫⬛
+⬛🟫⬛🟫⬛
+🤖🟫⬛⬛⬛💛
 
 MOVEMENT RULES:
 1. You can only move UP, RIGHT, DOWN, or LEFT
@@ -21,21 +21,24 @@ MOVEMENT RULES:
 3. You must stay within the grid boundaries
 4. Each move must be to an adjacent black pixel (⬛)
 5. The goal is to reach the yellow pixel (💛) using the shortest possible path
-
-GENERATE STEPS IN JSON FORMAT:
-{
- "steps": ["UP", "RIGHT", "DOWN", "LEFT"]
-}
+6. There is no limit on the number of steps - use as many as needed to reach the goal
 
 Rules for steps:
 - Only use valid directions: "UP", "RIGHT", "DOWN", "LEFT"
 - Steps must form a valid path from start to goal
 - Path must avoid all walls
 - Path must stay within grid boundaries
+- Use as many steps as necessary to reach the goal
+- Separate steps with commas and spaces
 
-Please generate only what's inside result, nothing more.
+
+GENERATE STEPS IN JSON FORMAT:
+{
+ "steps": "UP, RIGHT, DOWN, LEFT"
+}
+Please generate only what's inside result, nothing more, this is example, you can put more steps inside
 <RESULT>
 {
- "steps": ["RIGHT", "RIGHT", "RIGHT", "RIGHT"]
+  "steps": "UP, RIGHT, DOWN, LEFT"
 }
 </RESULT>
