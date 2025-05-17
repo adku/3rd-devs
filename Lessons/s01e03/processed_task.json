@@ -1,5 +1,4 @@
 {
-    "apikey": "%PUT-YOUR-API-KEY-HERE%",
     "description": "This is simple calibration data used for testing purposes. Do not use it in production environment!",
     "copyright": "Copyright (C) 2238 by BanAN Technologies Inc.",
     "test-data": [
@@ -176,7 +175,7 @@
             "answer": 165,
             "test": {
                 "q": "name of the 2020 USA president",
-                "a": "???"
+                "a": "Joe Biden"
             }
         },
         {
@@ -288,7 +287,7 @@
             "answer": 127,
             "test": {
                 "q": "What is the capital city of Poland?",
-                "a": "???"
+                "a": "Warsaw"
             }
         },
         {
@@ -4020,7 +4019,7 @@
             "answer": 81,
             "test": {
                 "q": "What is the capital city of Germany?",
-                "a": "???"
+                "a": "Berlin"
             }
         },
         {
@@ -5368,7 +5367,7 @@
             "answer": 111,
             "test": {
                 "q": "What is the capital city of France?",
-                "a": "???"
+                "a": "Paris"
             }
         },
         {
